@@ -35,11 +35,18 @@ function Home() {
     setOpen(false)
   }
 
+  const clearFunc=()=>{
+    localStorage.removeItem("people")
+    localStorage.removeItem("connections")
+    setData([])
+  }
+
   useEffect(() => {
     let item: any = localStorage.getItem("people") || null
     const array = JSON.parse(item) || []
     setData(array)
-  }, [])
+  }, [open])
+
 
   return (
     <div className="main">
@@ -73,6 +80,7 @@ function Home() {
         </DialogActions>
       </Dialog>
       <GetStatus data={data} dialog1={dialog1} Setdialog1={Setdialog1}/>
+      {!!data.length&&<div><Button onClick={clearFunc} color={"error"} sx={{"margin":"0", "padding": "10px 10px", "fontSize": "13px" }} variant={"contained"}>Delete all</Button></div>}
     </div>
   )
 }
