@@ -46,7 +46,7 @@ function Home() {
       <div style={{ "textAlign": "center", "fontWeight": "bold", "fontSize": "35px", "color": "#42a5f5" }}>Social App</div>
       <div style={{"display":"flex","flexDirection":"column","gap":"20px"}}>
         <Button onClick={() => setOpen(true)} sx={{ "padding": "10px 30px", "fontSize": "16px", "color": blue[400] }} variant="outlined">Add People</Button>
-        <Button onClick={() => Setdialog1(true)} sx={{ "padding": "10px 20px", "fontSize": "16px", "color": blue[400] }} variant="outlined">Find Degree of Separation</Button>
+        {data.length?<Button onClick={() => Setdialog1(true)} sx={{ "padding": "10px 20px", "fontSize": "16px", "color": blue[400] }} variant="outlined">Find Degree of Separation</Button>:null}
       </div>
       <Table data={data} />
       <Dialog open={open} onClose={() => setOpen(false)}>

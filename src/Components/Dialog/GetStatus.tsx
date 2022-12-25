@@ -109,7 +109,7 @@ function GetStatus({ dialog1, Setdialog1, data }: Iprops) {
                         <div style={{ "display": "flex", "gap":"10px","justifyContent":"center"}}>
                             {degree[0]?.map((value, index) => {
                                 return (
-                                    <div style={{ "display": "flex" }}>
+                                    <div key={index} style={{ "display": "flex" }}>
                                         <div>{value}</div>
                                         {(degree[0].length-1!==index)&&<div><ArrowForwardIcon /></div>}
                                     </div>
@@ -119,7 +119,7 @@ function GetStatus({ dialog1, Setdialog1, data }: Iprops) {
                         {degree.length>1&&<div style={{ "display": "flex", "gap":"10px","justifyContent":"center","marginTop":"10px" }}>
                             {degree[1]?.map((value, index) => {
                                 return (
-                                    <div style={{ "display": "flex" }}>
+                                    <div key={index} style={{ "display": "flex" }}>
                                         <div>{value}</div>
                                         {(degree[1].length-1!==index)&&<div><ArrowForwardIcon /></div>}
                                     </div>
