@@ -94,12 +94,13 @@ function SetRelationShip({ dialog2, Setdialog2, data }: Iprops) {
             Select the friend
           </DialogContentText>
 
-          <div style={{ "display": "flex", "alignItems": "center", "justifyContent": "center", "gap": "20px" }}>
+          <div className='relationdialog' style={{ "display": "flex", "alignItems": "center", "justifyContent": "center", "gap": "20px","marginTop":"10px" }}>
             <TextField
               type={"text"}
               value={dialog2.name}
               disabled
               style={{ "minWidth": "100px" }}
+              inputProps={{style: { textAlign: 'center'}}}
               variant="outlined" />
             <div>Friend of</div>
             <FormControl sx={{ m: 1, width: 120 }}>
