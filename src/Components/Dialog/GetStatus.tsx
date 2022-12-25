@@ -34,8 +34,9 @@ function GetStatus({ dialog1, Setdialog1, data }: Iprops) {
         let item: any = localStorage.getItem("connections") || null
         const array = JSON.parse(item) || []
         Setconnection(array)
-    }, [])
+    }, [dialog1])
 
+    console.log(connections)
     const handleClick = () => {
         const resutl = findConnection(selected.person1, selected.person2, connections)
         Setdegree(resutl)
