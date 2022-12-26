@@ -10,5 +10,11 @@
 }
 
 .relationdialog{
-    flex-direction: column;
+    flex-direction: row;
+}
+
+@media screen and (max-width:700px) {
+    .relationdialog{
+        flex-direction: column;
+    }
 }
